@@ -1,6 +1,9 @@
 #### Criando um Sistema de Perguntas e Respostas
 
-# Passo 1: Criar um dicionário com as perguntas e respostas
+# Passo 1: Importar bibliotecas
+import unicodedata
+
+# Passo 2: Criar um dicionário com as perguntas e respostas
 quiz = {
     "Qual é o maior planeta do sistema solar?": "Júpiter",
     "Em que continente fica o Brasil?": "América do Sul",
@@ -14,15 +17,26 @@ quiz = {
     "Quem foi o primeiro presidente do Brasil?": "Deodoro da Fonseca"
 }
 
-# Passo 2: Criar a lógica do quiz
+# Passo 3: Criar função para limpeza do input
+def limpar_texto(texto):
+    texto = texto.lower() # minúsculas
+    texto = unicodedata.normalize('NFD', texto) # "separa" possíveis caracteres especiais
+    texto = texto.encode('ascii', 'ignore').decode('utf-8') # remove os caracteres especiais
+    texto = texto.strip() # remove espaços em branco
+    return texto
+
+# Passo 4: Criar a lógica do quiz
 
 acertos = 0
+print("🧠 Bem-vindo(a) ao Quiz de Conhecimentos Gerais!\n")
 for pergunta, resposta in quiz.items():
     resposta_usuario = input(pergunta + " ")
 
-    if resposta_usuario.strip().lower() == resposta.lower():
-        print("Resposta correta")
+    # limpeza
+    if limpar_texto(resposta_usuario) == limpar_texto(resposta):
+        print("✅ Resposta correta!\n")
         acertos += 1
     else:
-        print(f"Resposta errada! Resposta correta é: {resposta}")
-print(f"Você acertou {acertos} de {len(quiz)}")
+        print(f"❌ Resposta errada! A resposta correta é: {resposta}\n")
+        
+print(f"🏁 Você acertou {acertos} de {len(quiz)}")
