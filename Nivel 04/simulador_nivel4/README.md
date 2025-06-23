@@ -19,16 +19,19 @@ Este é um sistema simples de gerenciamento de estoque desenvolvido em Python. E
 ## 🛠️ Tecnologias Utilizadas
 Python 3.13
 
-## $$ ▶️ Como Executar
-1. Clone este repositório ou copie o arquivo gerenciamento_produtos.py pal ou prompt de comando na pasta onde está o arquivo.
+## ▶️ Como Executar
+1. Clone este repositório ou copie o arquivo `gerenciamento_estoque.py`.
+2. Abra um terminal ou prompt de comando na pasta onde está o arquivo.
 3. Execute o script com o comando:
 
 ```
 python estoque.py
 ```
-rograma, o seguinte menu aparecerá:
 
-Armar Quantidade
-3. Aplicar Desconto
-4. Exibir Total do Estoque
-5. Exibir Lista de Produtoatizados de vendas e estoquieira • Projeto para a RetailCo [ Simulador Télos - Nível 4 ]
+## 💡 Melhorias Futuras
+1. Salvar os dados em arquivo (CSV ou JSON)
+2. Interface gráfica (GUI) ou interface web
+3. Relatórios automatizados de vendas e estoque
+
+### 👩‍💻 Desenvolvido por
+Maryllian Vieira • Projeto para a RetailCo - [Simulador Nível 4 - Télos Bootcamp]
