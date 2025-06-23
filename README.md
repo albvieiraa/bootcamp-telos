@@ -1,2 +1,2 @@
 # bootcamp-telos
-Repositório para exercícios simulados 
+Repositório para exercícios/simulados 
